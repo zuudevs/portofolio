@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zuu | Low-Level Engineer</title>
+    <title>Zuu | Low-Level Specialist & Hybrid Engineering</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,6 +57,36 @@
         @keyframes blink {
             50% { opacity: 0; }
         }
+
+        /* Tooltip Container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Tooltip Text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #334155;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.75rem;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-dark-bg text-slate-300 font-sans selection:bg-term-green selection:text-dark-bg">
@@ -107,21 +137,20 @@
             <p class="text-lg md:text-xl text-slate-500 mb-6 font-mono font-semibold">
                 (Rafi Indra Pramudhito Zuhayr)
             </p>
-            <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-mono">
-                Building foundations, not just applications. <br>
-                <span class="text-cpp-blue">C++ Specialist</span> & <span class="text-purple-400">Network Engineer</span>.
+            <p class="mt-4 text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-mono leading-relaxed">
+                Architecting core systems and resilient infrastructure. <br>
+                <span class="text-sm md:text-xl text-slate-500 block mt-2">
+                    Delivering high-performance <span class="text-cpp-blue font-bold">C++ Solutions</span> & <span class="text-purple-400 font-bold">System Engineering</span>.
+                </span>
             </p>
             
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-dark-bg bg-term-green hover:bg-green-400 md:py-4 md:text-lg transition-all transform hover:scale-105">
+                <a href="#projects" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-dark-bg bg-term-green hover:bg-green-400 md:py-4 md:text-lg transition-all transform hover:scale-105 shadow-lg shadow-term-green/20">
                     View My Work
                 </a>
                 <div class="flex gap-4 justify-center">
-                    <a href="https://github.com/zugyonozz" target="_blank" class="px-8 py-3 border border-slate-600 text-base font-medium rounded-md text-slate-300 hover:bg-slate-800 md:py-4 md:text-lg transition-all flex items-center gap-2">
-                        <i class="fab fa-github"></i> Main
-                    </a>
                     <a href="https://github.com/zuudevs" target="_blank" class="px-8 py-3 border border-slate-600 text-base font-medium rounded-md text-slate-300 hover:bg-slate-800 md:py-4 md:text-lg transition-all flex items-center gap-2">
-                        <i class="fab fa-github-alt"></i> Alt
+                        <i class="fab fa-github"></i> GitHub Profile
                     </a>
                 </div>
             </div>
@@ -131,38 +160,100 @@
     <!-- About / Terminal Section -->
     <section id="about" class="py-20 bg-dark-bg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <!-- Text Content -->
                 <div>
                     <h2 class="text-3xl font-bold text-white mb-6"><span class="text-term-green font-mono">01.</span> About Me</h2>
                     <p class="text-lg text-slate-400 mb-6 leading-relaxed">
-                        I am an <strong class="text-white">IT PLN student</strong> and <strong class="text-white">Laboratory Assistant (Asprak)</strong> with a deep passion for low-level programming.
+                        I am an <strong class="text-white">IT PLN student</strong> and <strong class="text-white">Laboratory Assistant</strong> with a relentless focus on low-level system design.
                     </p>
                     <p class="text-lg text-slate-400 mb-6 leading-relaxed">
-                        While others rely on heavy frameworks, I prefer understanding how things work under the hood. From manual memory management in <span class="text-cpp-blue font-bold">C++</span> to complex network protocol configurations.
+                        While many prioritize high-level abstractions, I focus on the foundations. My experience lies in manual memory management, optimizing critical paths in <span class="text-cpp-blue font-bold">C++</span>, and architecting complex systems to ensure security and efficiency.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 mt-8">
+                    
+                    <!-- Capability Highlights -->
+                    <div class="grid grid-cols-2 gap-4 mt-8 mb-8">
                         <div class="flex items-center gap-3">
                             <i class="fas fa-microchip text-term-green"></i>
-                            <span>Modern C++ (17/20/23)</span>
+                            <span>System Optimization</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <i class="fas fa-network-wired text-purple-400"></i>
-                            <span>Socket Programming</span>
+                            <span>System Engineering</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <i class="fas fa-shield-alt text-red-400"></i>
-                            <span>Network Security</span>
+                            <span>Infrastructure Security</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i class="fas fa-project-diagram text-blue-400"></i>
-                            <span>System Architecture</span>
+                            <i class="fas fa-code-branch text-blue-400"></i>
+                            <span>Low-Level Architecture</span>
                         </div>
+                    </div>
+
+                    <!-- Tech Stack / Arsenal -->
+                    <h3 class="text-white font-bold mb-4 font-mono text-sm uppercase tracking-wider text-term-green">Technical Arsenal</h3>
+                    <div class="space-y-5">
+                        
+                        <!-- Languages -->
+                        <div>
+                            <span class="text-xs text-slate-500 font-mono mb-2 block border-l-2 border-term-green/50 pl-2">Languages</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tooltip bg-slate-800 border border-slate-700 hover:border-cpp-blue text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">
+                                    C++
+                                    <span class="tooltiptext">Modern C++ (17/20)</span>
+                                </span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">C</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-yellow-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Python</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-orange-600 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Java</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-purple-600 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">C#</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-purple-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Kotlin</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-blue-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Dart</span>
+                            </div>
+                        </div>
+
+                        <!-- Web & Database -->
+                        <div>
+                            <span class="text-xs text-slate-500 font-mono mb-2 block border-l-2 border-blue-500/50 pl-2">Web & Data</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 border border-slate-700 hover:border-green-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Node.js</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-sky-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">React</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-cyan-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Tailwind</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-indigo-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">PHP</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-blue-600 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">MySQL</span>
+                            </div>
+                        </div>
+
+                        <!-- DevOps & Build Tools -->
+                        <div>
+                            <span class="text-xs text-slate-500 font-mono mb-2 block border-l-2 border-red-500/50 pl-2">DevOps & Build</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 border border-slate-700 hover:border-blue-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Docker</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-orange-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Git</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-gray-100 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">WSL</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-green-600 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">CMake</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-gray-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Make</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-red-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Clang</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-blue-600 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">PowerShell</span>
+                            </div>
+                        </div>
+
+                        <!-- Design & Documentation -->
+                        <div>
+                            <span class="text-xs text-slate-500 font-mono mb-2 block border-l-2 border-pink-500/50 pl-2">Creative & Docs</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-800 border border-slate-700 hover:border-blue-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Ps</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-orange-500 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Ai</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-purple-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">3D Modeling</span>
+                                <span class="bg-slate-800 border border-slate-700 hover:border-teal-400 text-slate-300 px-3 py-1 rounded text-sm font-mono cursor-default transition-colors">Typst</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- Fake Terminal -->
-                <div class="bg-card-bg rounded-lg border border-slate-700 shadow-2xl overflow-hidden font-mono text-sm">
+                <div class="bg-card-bg rounded-lg border border-slate-700 shadow-2xl overflow-hidden font-mono text-sm mt-4 lg:mt-0">
                     <div class="bg-slate-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -171,7 +262,13 @@
                     </div>
                     <div class="p-6 text-slate-300 space-y-4">
                         <div>
-                            <span class="text-term-green">zuu@local:~$</span> neofetch
+                            <span class="text-term-green">zuu@local:~$</span> whoami
+                        </div>
+                        <div class="text-slate-400 pl-4">
+                            "Rafi Indra P.Z."
+                        </div>
+                        <div>
+                            <span class="text-term-green">zuu@local:~$</span> neofetch --ascii_distro arch
                         </div>
                         <div class="flex gap-4">
                             <div class="text-cpp-blue hidden sm:block">
@@ -184,14 +281,14 @@
 |______|
                                 </pre>
                             </div>
-                            <div>
-                                <p><span class="text-term-green">User:</span> Zuu</p>
-                                <p><span class="text-term-green">Real Name:</span> Rafi Indra P.Z.</p>
-                                <p><span class="text-term-green">Role:</span> Asprak & Developer</p>
+                            <div class="text-xs sm:text-sm">
+                                <p><span class="text-term-green">OS:</span> Arch Linux x86_64</p>
+                                <p><span class="text-term-green">Role:</span> Laboratory Assistant</p>
+                                <p><span class="text-term-green">Focus:</span> Low-Level & Systems</p>
+                                <p><span class="text-term-green">Shell:</span> Zsh 5.9</p>
+                                <p><span class="text-term-green">Editor:</span> Neovim / VS Code</p>
                                 <p><span class="text-term-green">Uptime:</span> 20 Years</p>
-                                <p><span class="text-term-green">Shell:</span> Zsh</p>
-                                <p><span class="text-term-green">Langs:</span> C++, C, Python, Kotlin</p>
-                                <p><span class="text-term-green">Status:</span> Coding foundations...</p>
+                                <p><span class="text-term-green">Memory:</span> 32GB / 64GB</p>
                             </div>
                         </div>
                         <div>
@@ -206,11 +303,13 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-[#0b1120]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center"><span class="text-term-green font-mono">02.</span> Featured Projects</h2>
+            <h2 class="text-3xl font-bold text-white mb-12 text-center"><span class="text-term-green font-mono">02.</span> Featured Repositories</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <div class="bg-card-bg rounded-xl p-6 border border-slate-700 hover:border-term-green transition-all group">
+                <!-- Project 1 -->
+                <div class="bg-card-bg rounded-xl p-6 border border-slate-700 hover:border-term-green transition-all group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-slate-800 text-xs text-term-green px-2 py-1 rounded-bl-lg font-mono">Pinned</div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-term-green text-4xl">
                             <i class="fas fa-network-wired"></i>
@@ -230,6 +329,7 @@
                     </ul>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="bg-card-bg rounded-xl p-6 border border-slate-700 hover:border-term-green transition-all group">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-term-green text-4xl">
@@ -250,6 +350,7 @@
                     </ul>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="bg-card-bg rounded-xl p-6 border border-slate-700 hover:border-term-green transition-all group">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-term-green text-4xl">
@@ -270,6 +371,7 @@
                     </ul>
                 </div>
 
+                <!-- Project 4 -->
                 <div class="bg-card-bg rounded-xl p-6 border border-slate-700 hover:border-term-green transition-all group">
                     <div class="flex justify-between items-start mb-4">
                         <div class="text-term-green text-4xl">
@@ -294,7 +396,7 @@
             
             <div class="mt-12 text-center">
                 <a href="https://github.com/zuudevs?tab=repositories" target="_blank" class="inline-flex items-center gap-2 text-term-green hover:underline font-mono">
-                    View full archive on GitHub <i class="fas fa-arrow-right"></i>
+                    View full archive on zuudevs <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -305,18 +407,18 @@
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-2xl font-bold text-white mb-6">Get In Touch</h2>
             <p class="text-slate-400 mb-8 max-w-lg mx-auto">
-                Currently open for collaboration on C++ based projects or network engineering research.
+                Currently open for collaboration on C++ based projects or system engineering research.
             </p>
             
             <div class="flex justify-center gap-6 mb-8">
-                <a href="https://github.com/zugyonozz" class="text-slate-400 hover:text-white transition-colors text-2xl"><i class="fab fa-github"></i></a>
-                <a href="mailto:your.email@example.com" class="text-slate-400 hover:text-term-green transition-colors text-2xl"><i class="fas fa-envelope"></i></a>
-                <a href="#" class="text-slate-400 hover:text-blue-400 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/zuudevs" class="text-slate-400 hover:text-white transition-colors text-2xl" aria-label="Github"><i class="fab fa-github"></i></a>
+                <a href="mailto:zuudevs@gmail.com" class="text-slate-400 hover:text-term-green transition-colors text-2xl" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="www.linkedin.com/in/rafi-zuhayr" class="text-slate-400 hover:text-blue-400 transition-colors text-2xl" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
 
             <p class="text-slate-600 text-sm font-mono">
                 Designed & Built by <span class="text-term-green">Zuu</span> <br>
-                &copy; 2024 zugyonozz & zuudevs
+                &copy; 2024 zuudevs
             </p>
         </div>
     </footer>
